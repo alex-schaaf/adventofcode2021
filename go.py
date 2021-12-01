@@ -1,8 +1,7 @@
-import sys
 import os
 from datetime import datetime
 
-TEMPLATE = """package main
+template = """package main
 func readFileLines(filepath string, split string) []string {
 	content, _ := ioutil.ReadFile(filepath)
 	return strings.Split(string(content), split)
@@ -12,19 +11,12 @@ func main() {
 }
 """
 
-if __name__ == '__main__':
-    now = datetime.now()
-    if now.month != 12:
-        sys.exit(1)
+day = datetime.now().strftime("%d")
+folder = f"day{day}"
+os.mkdir(folder)
 
-    folder = f"day{str(now.day).zfill(2)}"
+with open(folder + "/main.go", "w") as file:
+    file.write(template)
 
-    if os.path.exists(folder):
-        sys.exit(1)
-
-    os.mkdir(folder)
-    with open(folder + "/main.go", "w") as file:
-        file.write(TEMPLATE)
-
-    open(folder + "/test", "w").close()
-    open(folder + "/input", "w").close()
+open(folder + "/test", "w").close()
+open(folder + "/input", "w").close()
