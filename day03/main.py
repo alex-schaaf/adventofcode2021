@@ -8,10 +8,7 @@ def thin_input(lines: list[str], pos: int, mode: Literal["oxygen", "co2"]) -> li
     for line in lines:
         count[line[pos]] += 1
 
-    print(count)
-
     if mode == "co2":
-
         if count["0"] > count["1"]:
             return [line for line in lines if line[pos] == "1"]
         else:
