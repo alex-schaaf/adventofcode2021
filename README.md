@@ -8,3 +8,4 @@
 4. [Python](https://github.com/alex-schaaf/adventofcode2021/blob/main/day04/main.py)
 5. [Go](https://github.com/alex-schaaf/adventofcode2021/blob/main/day05/main.go)
 6. [Go (Part 1)](https://github.com/alex-schaaf/adventofcode2021/blob/main/day06/main.go), [Go (Part 2)](https://github.com/alex-schaaf/adventofcode2021/blob/main/day06/main2.go)
+7. [Go](https://github.com/alex-schaaf/adventofcode2021/blob/main/day07/main.go)
