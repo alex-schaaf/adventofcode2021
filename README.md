@@ -11,3 +11,5 @@
 7. [Go](https://github.com/alex-schaaf/adventofcode2021/blob/main/day07/main.go)
 8.
 9. [Python](https://github.com/alex-schaaf/adventofcode2021/blob/main/day09/main.py)
+10.
+11. [Python](https://github.com/alex-schaaf/adventofcode2021/blob/main/day11/main.py)
