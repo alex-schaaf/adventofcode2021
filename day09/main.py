@@ -34,15 +34,16 @@ for x in range(0, rows):
 print(f"Part 1: {sum([m + 1 for m in minima])}")
 
 directions = [
-        (-1, 0),
-        (1, 0),
-        # (-1, -1),
-        # (1, 1),
-        # (-1, 1),
-        # (1, -1),
-        (0, -1),
-        (0, 1),
-    ]
+    (-1, 0),
+    (1, 0),
+    # (-1, -1),
+    # (1, 1),
+    # (-1, 1),
+    # (1, -1),
+    (0, -1),
+    (0, 1),
+]
+
 
 def bfs(grid: np.ndarray, i: int, j: int):
     visited = set()
@@ -60,13 +61,14 @@ def bfs(grid: np.ndarray, i: int, j: int):
         for di, dj in directions:
             if height == 9:
                 continue
-            ni, nj = ((ci + di, cj + dj))
+            ni, nj = (ci + di, cj + dj)
             if ni < 0 or nj < 0 or ni > grid.shape[0] - 1 or nj > grid.shape[1] - 1:
                 pass
             elif (ni, nj) not in visited:
                 visit.add((ni, nj))
 
     return len(basin)
+
 
 sizes = []
 for x, y in minima_xy[:]:
@@ -79,5 +81,3 @@ for size in sorted(sizes)[-3:]:
     product *= size
 
 print(f"Part 2: {product}")
-
-
